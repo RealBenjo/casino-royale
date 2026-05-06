@@ -1,0 +1,36 @@
+<?php
+// index.php
+session_start();
+session_unset(); 
+session_destroy();
+?>
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <title>Vnos igralcev</title>
+  <link rel="stylesheet" href="css/classes.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Vnos Igralcev</h1>
+  <form method="POST" action="play.php">
+    <?php for ($i = 1; $i <= 3; $i++): ?>
+      <div class="igralec-form">
+        <h3>Igralec <?php echo $i; ?></h3>
+        <label>Ime:</label>
+        <input type="text" name="ime<?php echo $i; ?>" required>
+        
+        <label>Priimek:</label>
+        <input type="text" name="priimek<?php echo $i; ?>" required>
+      </div>
+    <?php endfor; ?>
+    
+    <input type="submit" name="igraj" class="btn" value="Vrzi kocke za vse!">
+  </form>
+</div>
+
+</body>
+</html>
