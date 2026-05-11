@@ -38,8 +38,7 @@ if (isset($_POST['igraj'])) {
   <link rel="stylesheet" href="css/classes.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  
+<body>  
   <div class="container">
     <h1>Rezultati igre</h1>
     

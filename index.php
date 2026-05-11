@@ -15,7 +15,8 @@ session_destroy();
 <body>
 
 <div class="container">
-  <h1>Vnos Igralcev</h1>
+  <h1>Casino Royale</h1>
+
   <form method="POST" action="play.php">
     <?php for ($i = 1; $i <= 3; $i++): ?>
       <div class="igralec-form">
