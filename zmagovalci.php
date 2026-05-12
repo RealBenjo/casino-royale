@@ -49,7 +49,7 @@ foreach ($_SESSION['igralci'] as $igralec) {
 <body>
 
 <div class="container">
-  <h1 class="smooth-box">🏆 Zmagovalne stopničke 🏆</h1>
+  <h1 class="smooth-box">Zmagovalne stopničke</h1>
   
   <div class="stopnicke-container">
       
