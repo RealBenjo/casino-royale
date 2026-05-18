@@ -43,6 +43,7 @@ foreach ($_SESSION['igralci'] as $igralec) {
 <head>
   <meta charset="UTF-8">
   <title>Zmagovalci</title>
+  <link rel="icon" href="images/icon.png">
   <link rel="stylesheet" href="css/classes.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -66,7 +67,7 @@ foreach ($_SESSION['igralci'] as $igralec) {
         </div>
 
         <div>
-          <p>2. Mesto</p>
+          <p style="font-size: 1.2rem;">2. Mesto</p>
         </div>
 
       </div>
@@ -75,17 +76,17 @@ foreach ($_SESSION['igralci'] as $igralec) {
 
     <div class="mesto mesto-1">
 
-        <div class="mesto-ime">
-          <?php echo implode("<br>in<br>", $zmagovalci_1_mesto); ?>
-        </div>
+      <div class="mesto-ime">
+        <?php echo implode("<br>in<br>", $zmagovalci_1_mesto); ?>
+      </div>
 
-        <div class="mesto-tocke">
-          <?php echo $zlato_tocke; ?> točk
-        </div>
+      <div class="mesto-tocke">
+        <?php echo $zlato_tocke; ?> točk
+      </div>
 
-        <div>
-          <p>1. Mesto</p>
-        </div>
+      <div>
+        <p style="font-size: 1.2rem;">1. Mesto</p>
+      </div>
 
     </div>
 
@@ -101,7 +102,7 @@ foreach ($_SESSION['igralci'] as $igralec) {
         </div>
 
         <div>
-          <p>3. Mesto</p>
+          <p style="font-size: 1.2rem;">3. Mesto</p>
         </div>
 
       </div>

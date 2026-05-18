@@ -9,6 +9,7 @@ session_destroy();
 <head>
   <meta charset="UTF-8">
   <title>Vnos igralcev</title>
+  <link rel="icon" href="images/icon.png">
   <link rel="stylesheet" href="css/classes.css">
   <link rel="stylesheet" href="css/style.css">
 </head>

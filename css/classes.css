@@ -1,41 +1,12 @@
-:root {
-  /* Casino Luxury Palette */
-  --gold-primary: #d4af37;
-  --gold-light: #f9e27d;
-  --gold-dark: #aa8c2c;
-  --casino-black: #0f0f0f;
-  --casino-red: #800000;
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --text-light: #e0e0e0;
-  --shadow-gold: rgba(212, 175, 55, 0.3);
-}
-
-body {
-  font-family: 'Georgia', serif; /* Serif fonts feel more luxurious */
-  background: radial-gradient(circle, #1a1a1a 0%, #000000 100%);
-  color: var(--text-light);
-  padding: 40px 20px;
-  min-height: 100vh;
-}
-
 .container {
   max-width: 900px;
   margin: auto;
-  background: var(--glass-bg);
+  background: var(--casino-black);
   backdrop-filter: blur(10px);
   padding: 40px;
   border-radius: 20px;
   border: 1px solid var(--gold-dark);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--shadow-gold);
-}
-
-h1 {
-  color: var(--gold-primary);
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 2.5rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  margin-bottom: 30px;
 }
 
 /* Luxury Form Elements */
@@ -71,7 +42,7 @@ input[type="text"] {
   margin-bottom: 15px;
   background: #222;
   border: 1px solid var(--gold-dark);
-  color: white;
+  color: var(--gold-primary);
   border-radius: 8px;
   outline: none;
 }
@@ -98,6 +69,7 @@ input[type="text"]:focus {
   transition: 0.5s;
   text-decoration: none;
   text-align: center;
+  margin-top: 20px;
 }
 
 .btn:hover {
@@ -113,10 +85,17 @@ input[type="text"]:focus {
   margin-top: 30px;
 }
 
+.btn-nazaj:hover {
+  background: var(--gold-primary);
+  color: #000;
+  box-shadow: 0 0 20px var(--shadow-gold);
+}
+
 /* Results Display */
 .igralec-rezultat {
   border-bottom: 1px solid rgba(212, 175, 55, 0.2);
   padding: 30px 0;
+  text-align: center;
 }
 
 .kocka-img {
@@ -126,6 +105,12 @@ input[type="text"]:focus {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255,255,255,0.1);
   border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.kocka-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px var(--shadow-gold);
 }
 
 .skupna-vsota {
@@ -138,6 +123,7 @@ input[type="text"]:focus {
   color: var(--gold-primary);
   text-align: center;
   margin: 30px 0;
+  font-size: 1.3rem;
 }
 
 /* Podium Overhaul */
@@ -163,25 +149,21 @@ input[type="text"]:focus {
   overflow: hidden;
 }
 
-/* 1st Place - Solid Gold */
 .mesto-1 {
   height: 250px;
-  background: linear-gradient(to top, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa8238);
+  background: linear-gradient(to top, #bf953f, #fcf6ba);
   color: #000;
-  border: 2px solid #fff;
 }
 
-/* 2nd Place - Silver Chrome */
 .mesto-2 {
   height: 200px;
-  background: linear-gradient(to top, #808080, #e6e6e6, #808080);
+  background: linear-gradient(to top, #808080, #e6e6e6);
   color: #000;
 }
 
-/* 3rd Place - Polished Bronze */
 .mesto-3 {
   height: 160px;
-  background: linear-gradient(to top, #804a00, #cd7f32, #804a00);
+  background: linear-gradient(to top, #804a00, #cd7f32);
   color: #fff;
 }
 
@@ -189,9 +171,11 @@ input[type="text"]:focus {
   font-weight: 900;
   margin-bottom: 10px;
   font-size: 1.1rem;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
 }
 
 .mesto-tocke {
-  font-size: 2.2rem;
+  font-size: 1rem;
   font-weight: bold;
+  margin-bottom: 10px;
 }

@@ -35,6 +35,7 @@ if (isset($_POST['igraj'])) {
 <head>
   <meta charset="UTF-8">
   <title>Rezultati metov</title>
+  <link rel="icon" href="images/icon.png">
   <link rel="stylesheet" href="css/classes.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -47,10 +48,10 @@ if (isset($_POST['igraj'])) {
         <h2><?php echo $igralec['ime'] . " " . $igralec['priimek']; ?></h2>
         <p>
           <?php foreach ($igralec['meti'] as $kocka): ?>
-            <img 
-              class='kocka-img animirana-kocka' 
-              src='images/dice-anim.gif' alt='Kocka'
-              data-rezultat='images/dice<?php echo $kocka; ?>.gif' 
+            <img
+              class='kocka-img'
+              src='images/dice/dice-anim.gif' alt='Kocka'
+              data-rezultat='images/dice/dice<?php echo $kocka; ?>.gif'
               alt='Kocka'
             >
           <?php endforeach; ?>
