@@ -1,197 +1,69 @@
-:root {
-  /* Casino Luxury Palette */
-  --gold-primary: #d4af37;
-  --gold-light: #f9e27d;
-  --gold-dark: #aa8c2c;
-  --casino-black: #0f0f0f;
-  --casino-red: #800000;
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --text-light: #e0e0e0;
-  --shadow-gold: rgba(212, 175, 55, 0.3);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body {
-  font-family: 'Georgia', serif; /* Serif fonts feel more luxurious */
-  background: radial-gradient(circle, #1a1a1a 0%, #000000 100%);
-  color: var(--text-light);
-  padding: 40px 20px;
-  min-height: 100vh;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  background: var(--glass-bg);
+/* SweetAlert2 Casino Theme Customizations */
+.site-swal-popup {
+  background: rgba(15, 15, 15, 0.9) !important; /* var(--casino-black) with transparency */
   backdrop-filter: blur(10px);
-  padding: 40px;
-  border-radius: 20px;
-  border: 1px solid var(--gold-dark);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--shadow-gold);
+  border: 2px solid var(--gold-dark) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px var(--shadow-gold) !important;
+  font-family: 'Georgia', serif !important;
 }
 
-h1 {
-  color: var(--gold-primary);
+.site-swal-title {
+  color: var(--gold-primary) !important;
   text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 2.5rem;
+  letter-spacing: 3px;
+  font-size: 2rem !important;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  margin-bottom: 30px;
-}
-
-/* Luxury Form Elements */
-.igralec-form {
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  background: rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.igralec-form:hover {
-  transform: translateY(-5px);
-  border-color: var(--gold-primary);
-}
-
-.igralec-form h3 {
-  color: var(--gold-light);
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--gold-primary);
-  margin-bottom: 5px;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  background: #222;
-  border: 1px solid var(--gold-dark);
-  color: white;
-  border-radius: 8px;
-  outline: none;
-}
-
-input[type="text"]:focus {
-  border-color: var(--gold-light);
-  box-shadow: 0 0 10px var(--shadow-gold);
-}
-
-/* The "Golden" Buttons */
-.btn {
-  display: block;
-  width: 100%;
-  padding: 18px;
-  background: linear-gradient(135deg, var(--gold-dark), var(--gold-light), var(--gold-dark));
-  background-size: 200% auto;
-  color: #000;
-  font-weight: bold;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  transition: 0.5s;
-  text-decoration: none;
-  text-align: center;
-}
-
-.btn:hover {
-  background-position: right center;
-  box-shadow: 0 0 25px var(--gold-primary);
-  transform: scale(1.02);
-}
-
-.btn-nazaj {
-  background: transparent;
-  border: 1px solid var(--gold-primary);
-  color: var(--gold-primary);
-  margin-top: 30px;
-}
-
-/* Results Display */
-.igralec-rezultat {
   border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-  padding: 30px 0;
+  padding-bottom: 15px;
 }
 
-.kocka-img {
-  width: 70px;
-  height: 70px;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255,255,255,0.1);
-  border: 2px solid transparent;
+.site-swal-center {
+  color: var(--text-light) !important;
+  font-size: 1.2rem !important;
+  text-align: center !important;
+  margin-top: 20px !important;
 }
 
-.skupna-vsota {
-  font-size: 1.5rem;
+/* Stylize the author name directly */
+.site-swal-center strong {
   color: var(--gold-light);
+  display: block;
+  font-size: 1.4rem;
   margin-top: 10px;
+  letter-spacing: 1px;
 }
 
-.big-text {
-  color: var(--gold-primary);
-  text-align: center;
-  margin: 30px 0;
+.site-swal-actions {
+  margin-top: 25px !important;
 }
 
-/* Podium Overhaul */
-.stopnicke-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 300px;
-  margin-top: 50px;
-  gap: 15px;
+.site-swal-confirm {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold-light), var(--gold-dark)) !important;
+  background-size: 200% auto !important;
+  color: #000 !important;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  border: none !important;
+  border-radius: 50px !important;
+  padding: 12px 35px !important;
+  font-size: 1rem !important;
+  transition: 0.4s !important;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-.mesto {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  border-radius: 15px 15px 0 0;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
-  position: relative;
-  overflow: hidden;
+.site-swal-confirm:hover {
+  background-position: right center !important;
+  box-shadow: 0 0 20px var(--gold-primary) !important;
+  transform: scale(1.05);
 }
 
-/* 1st Place - Solid Gold */
-.mesto-1 {
-  height: 250px;
-  background: linear-gradient(to top, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa8238);
-  color: #000;
-  border: 2px solid #fff;
-}
-
-/* 2nd Place - Silver Chrome */
-.mesto-2 {
-  height: 200px;
-  background: linear-gradient(to top, #808080, #e6e6e6, #808080);
-  color: #000;
-}
-
-/* 3rd Place - Polished Bronze */
-.mesto-3 {
-  height: 160px;
-  background: linear-gradient(to top, #804a00, #cd7f32, #804a00);
-  color: #fff;
-}
-
-.mesto-ime {
-  font-weight: 900;
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-}
-
-.mesto-tocke {
-  font-size: 2.2rem;
-  font-weight: bold;
+.site-swal-confirm:focus {
+  box-shadow: 0 0 0 3px var(--shadow-gold) !important;
 }

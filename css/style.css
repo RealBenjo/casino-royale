@@ -1,7 +1,13 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+:root {
+  /* Casino Luxury Palette */
+  --gold-primary: #d4af37;
+  --gold-light: #f9e27d;
+  --gold-dark: #aa8c2c;
+  --casino-black: #0f0f0f;
+  --casino-red: #800000;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --text-light: #e0e0e0;
+  --shadow-gold: rgba(212, 175, 55, 0.3);
 }
 
 body {
@@ -44,22 +50,34 @@ h3 {
   color: var(--gold-light);
 }
 
-.igralec-form {
+/* Player Form Container - Horizontal Layout */
+.player-form-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.player-form {
+  flex: 1;
+  min-width: 150px;
+  max-width: 250px;
   border: 1px solid rgba(212, 175, 55, 0.3);
   padding: 20px;
-  margin-bottom: 20px;
   border-radius: 12px;
   background: rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
 
-.igralec-form:hover {
+.player-form:hover {
   transform: translateY(-5px);
   border-color: var(--gold-primary);
 }
 
-.igralec-form h3 {
+.player-form h3 {
   margin-bottom: 15px;
+  text-align: center;
 }
 
 label {
@@ -69,7 +87,8 @@ label {
   margin-bottom: 5px;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="number"] {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
@@ -81,9 +100,46 @@ input[type="text"] {
   transition: all 0.3s ease;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="number"]:focus {
   border-color: var(--gold-light);
   box-shadow: 0 0 10px var(--shadow-gold);
+}
+
+/* Dice Selector Form */
+.dice-selector-form {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.dice-selector-form label {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--gold-primary);
+  margin-bottom: 20px;
+}
+
+.dice-selector-form input[type="number"] {
+  width: 120px;
+  display: inline-block;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.dice-info {
+  background: rgba(212, 175, 55, 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--gold-light);
+  font-size: 1.1rem;
 }
 
 .btn {
@@ -111,26 +167,26 @@ input[type="text"]:focus {
   transform: scale(1.02);
 }
 
-.btn-nazaj {
+.btn-back {
   background: transparent;
   border: 1px solid var(--gold-primary);
   color: var(--gold-primary);
   margin-top: 30px;
 }
 
-.btn-nazaj:hover {
+.btn-back:hover {
   background: var(--gold-primary);
   color: #000;
   box-shadow: 0 0 20px var(--shadow-gold);
 }
 
-.igralec-rezultat {
+.player-result {
   border-bottom: 1px solid rgba(212, 175, 55, 0.2);
   padding: 30px 0;
   text-align: center;
 }
 
-.kocka-img {
+.dice-img {
   width: 70px;
   height: 70px;
   margin: 10px;
@@ -140,12 +196,12 @@ input[type="text"]:focus {
   transition: all 0.3s ease;
 }
 
-.kocka-img:hover {
+.dice-img:hover {
   transform: scale(1.1);
   box-shadow: 0 0 25px var(--shadow-gold);
 }
 
-.skupna-vsota {
+.total-score {
   font-size: 1.5rem;
   color: var(--gold-light);
   margin-top: 10px;
@@ -158,7 +214,8 @@ input[type="text"]:focus {
   font-size: 1.3rem;
 }
 
-.stopnicke-container {
+/* Podium Container */
+.podium-container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -167,7 +224,7 @@ input[type="text"]:focus {
   gap: 15px;
 }
 
-.mesto {
+.podium {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -180,41 +237,44 @@ input[type="text"]:focus {
   overflow: hidden;
 }
 
-.mesto-1 {
+/* 1st Place - Gold */
+.podium-1 {
   height: 250px;
-  background: linear-gradient(to top, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa8238);
+  background: linear-gradient(135deg, #d4af37, #f9e27d, #e6c200, #fdf394);
   color: #000;
   border: 2px solid #fff;
 }
 
-.mesto-2 {
+/* 2nd Place - Silver */
+.podium-2 {
   height: 200px;
-  background: linear-gradient(to top, #808080, #e6e6e6, #808080);
+  background: linear-gradient(135deg, #c0c0c0, #e8e8e8, #d3d3d3);
   color: #000;
   border: 2px solid #d0d0d0;
 }
 
-.mesto-3 {
+/* 3rd Place - Bronze */
+.podium-3 {
   height: 160px;
-  background: linear-gradient(to top, #804a00, #cd7f32, #804a00);
+  background: linear-gradient(135deg, #b87333, #cd7f32, #a0694a);
   color: #fff;
   border: 2px solid #a0692a;
 }
 
-.mesto-ime {
+.podium-name {
   font-weight: 900;
   margin-bottom: 10px;
   font-size: 1.1rem;
   text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
 }
 
-.mesto-tocke {
+.podium-score {
   font-size: 2.2rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-#sekunde {
+#seconds {
   font-size: 2rem;
   color: var(--gold-light);
   display: inline-block;
