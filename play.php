@@ -98,9 +98,9 @@ if (!isset($_SESSION['dice_rolled'])):
         <p>
           <?php foreach ($player['rolls'] as $die): ?>
             <img
-              class='dice-img animated-dice'
-              src='images/dice-anim.gif' alt='Die'
-              data-result='images/dice<?php echo $die; ?>.gif'
+              class='dice-img rolling'
+              src='images/dice/dice<?php echo $die; ?>.gif' 
+              alt='Die <?php echo $die; ?>'
             >
           <?php endforeach; ?>
         </p>

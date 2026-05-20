@@ -20,9 +20,9 @@ const confettiInterval = setInterval(function() {
     },
     startVelocity: 20,
     gravity: 0.9,
-    ticks: 300
+    ticks: 200
   });
-}, 50); // Fires every 50ms for a continuous trickle
+}, 150); // Fires every 50ms for a continuous trickle
 
 // Auto-redirect after 20 seconds
 var secondsLeft = 20;
